@@ -12,3 +12,9 @@ body {
 canvas {
     position: absolute
 }
+
+.title {
+    position: absolute;
+    top:0;
+    text-align:center;
+}
