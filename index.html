@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Face Landmark Detection detection on the browser using javascript ! By Subrata</title>
-  <script defer src="face-api.min.js"></script>
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body style="display: flex; flex-direction: column;">
-  <div class="title">
-    <h1>Face Landmark Detection</h1>
-    <p>Purpose: Mini Dissertation * Submitted By: Subrata Kumar Das * Guided By: Dr. Javed Wasim</p>
-  </div>
-    <video id="video" width="600" height="450" autoplay>
-      <h3 id="name"></h3>
-      <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyAHafALODdCvEypw04otd6A_QOfH146ejY",
-          authDomain: "fldbysubrata.firebaseapp.com",
-          projectId: "fldbysubrata",
-          storageBucket: "fldbysubrata.appspot.com",
-          messagingSenderId: "1055607890041",
-          appId: "1:1055607890041:web:db7fdcada7d3c343e7b4a8",
-          measurementId: "G-T488H28Y59"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Recognition with Liveness Detection</title>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+      video,
+      canvas {
+        display: block;
+        margin: auto;
+      }
+      #info {
+        text-align: center;
+        font-size: 1.5em;
+      }
+    </style>
+  </head>
+  <body style="display: flex">
+    <div id="beforeCapture" style="flex: 1">
+      <video id="video" width="180" height="140" autoplay muted></video>
+      <div id="info">
+        <p id="name"></p>
+        <p id="liveness">Liveness: Not Live</p>
+      </div>
+      <canvas
+        id="captureCanvas"
+        width="180"
+        height="140"
+        style="display: none"
+      ></canvas>
+    </div>
+    <div style="flex: 1; align-items: center">
+      <div id="afterCapture" style="border: 1px solid red; padding: 10px">
+        <img id="image" src="" />
+        <p id="status"></p>
+        <p id="name1"></p>
+      </div>
+    </div>
+  </body>
 </html>
