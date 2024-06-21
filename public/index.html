@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Face Landmark Detection detection on the browser using javascript ! By Subrata</title>
+  <title>Face Recognition System on the browser using javascript ! By Subrata</title>
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -13,8 +13,11 @@
   <div class="title">
     <h1>Face Landmark Detection</h1>
     <p>Purpose: Mini Dissertation * Submitted By: Subrata Kumar Das * Guided By: Dr. Javed Wasim</p>
+    <h3 id="name"></h3>
+    <h4 id="liveness"></h4>
   </div>
     <video id="video" width="600" height="450" autoplay>
+      
       <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
